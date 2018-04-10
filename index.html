@@ -1,13 +1,25 @@
 <!DOCTYPE html>
+
+
 <html>
+
+
 <head>
 	<title>Foods Hangman</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
 
+	<!--Bootsrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+
+<body>
+	<!--Bootstrap Container that will hold everything-->
 	<div class='container'>
+
+		<!-- Jumbotron hold the title section. -->
 		<div class='jumbotron'>
 			<div class='container'>
 				<h1 style="color: black">Foods Hangman</h1>
@@ -17,10 +29,11 @@
 		</div>
 	</div>
 
+	<!-- Game Counters are held here. Panels are being used to hold various sections-->
 	<div class='row'>
 		<div class="col-lg-12">
 			
-
+			<!-- First Panel: Holds the word to guess (blanks and guessed word)-->
 			<div class="panel panel-default">
 				<div class='panel-heading'>
 					<h3 class="panel-title"><strong>Word to Guess</strong></h3>
@@ -28,59 +41,49 @@
 
 				<div class="panel-body">
 					
+					<!-- here is what we'll be replacing with letters as the user guesses-->
 					<h3 id='word-blanks'>_ _ _ _ _ _ _ _ _</h3>
 
 				</div>
 			</div>
 
-
+			<!-- Second Panel: Holds the list of wrong user guesses-->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
 
+				<!-- Here we will be dumping the number of guesses left-->
 				<strong>Wrong Guesses: </strong> <span id='wrong-guesses'></span>
 			</div>
 
 
-
-
+			<!-- Third Pannel: Hold the number of wrong guesses-->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
-
+				
+				<!--here we'll dumb the number of guesses left-->
 				<strong>Guesses Left: </strong> <span id='guesses-left'>5</span>
 			</div>
 
 
-
+			<!-- Fourth Panel: Hold the number of wins-->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
-
+				<!-- here we'll dump the number of wins-->
 				<strong>Wins: </strong> <span id='win-counter'>0</span>
 			</div>
 
-
-
-
+			<!-- Fifth Panel: Holds the number of losses-->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
-
+					<!-- here we'll dump the number of losses-->
 				<strong>Losses: </strong> <span id='loss-counter'>0</span>
 			</div>
-
-
-
-
-
-
 		</div>
 	</div>
-
-	
-
-
+	<!-- Adds a link to the Javascript File. It loads at the bottom so it waits for the HTML content to diplay first. If you put this at the top it will crash, because the HTML ID's won't exist yet -->
 	<script src='logic.js'> </script>
 
-	
-
-
 </body>
+
+
 </html>
